@@ -27,3 +27,8 @@ function magNumber(info){
         return Math.ceil((info.pop() * 3) / weapons[info[i]]);
     }
   }
+
+  function magNumber(info){
+    let result = info[1] * 3 / (info[0] == 'PT92' ? 17 : info[0] == 'PSG1' ? 5 : 30);
+    return  Math.ceil(result);
+    }
