@@ -26,3 +26,14 @@ function eachCons(array, n) {
 
     return res.filter(e => e.length === n);
   }
+
+
+
+  // solution with for loop only
+  function eachCons(array, n) {
+    const newArr = [];
+    for (let a=n, i=0; a <= array.length; i++, a++){
+      newArr.push(array.slice(i,a))
+    }
+    return newArr
+  }
