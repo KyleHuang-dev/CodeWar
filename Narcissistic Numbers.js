@@ -10,4 +10,17 @@ function isNarcissistic(n) {
     let sum = arr.map(num => num**l).reduce((acc, cur)=> acc + cur, 0)
     return n === sum
   }
+  // p: number, +, 
+// R: ture or false
+// E:
+//234= 8+27+64 = 99 false
+// P: find the length of number
+//    convert the number to string to array and map each element 
+//    Reduce for the sum.
+//    check if n === the sum
+
+function isNarcissistic(n) {
+    let arr = String(n).split('')
+    return arr.reduce((acc, cur)=> acc + cur**arr.length, 0) == n
+  }
   
