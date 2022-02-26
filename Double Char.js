@@ -6,3 +6,6 @@
 function doubleChar(str) {
   return Array.from(str).map(a => a+a).join("")
 }
+
+// simplify the answer
+const doubleChar = (str) => str.split("").map(c => c + c).join("");
