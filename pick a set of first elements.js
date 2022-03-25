@@ -12,3 +12,8 @@
 function first(arr, n) {
     return (n<= 0) ? [] : n > 1 ? arr.slice(0,n): [arr[0]]
   }
+
+// other solution
+function first(arr, n=1) {
+    return arr.slice(0,n)
+  }
