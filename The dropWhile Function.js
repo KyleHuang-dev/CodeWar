@@ -16,3 +16,9 @@ function dropWhile(arr,pred){
     }
     return arr.slice(i)
   }
+
+// solution by for loop
+function dropWhile(arr, pred) {
+    for (var i = 0; i < arr.length && pred(arr[i]); ++i) ;
+    return arr.slice(i)
+  }
