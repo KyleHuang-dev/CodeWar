@@ -7,3 +7,15 @@
 function divisibleBy(numbers, divisor){
     return numbers.filter(num=> num % divisor ===0)
   }
+
+
+  //solution with for loop
+  function divisibleBy(numbers, divisor){
+    let arr =[];
+    for( i=0; i< numbers.length; i++){
+      if(numbers[i]%divisor === 0){
+        arr.push(numbers[i])
+      }
+    }
+    return arr
+  }
