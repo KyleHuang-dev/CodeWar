@@ -15,3 +15,6 @@ const arr = N => {
     }
     return newArr
   };
+
+  // other solution
+  const arr = n => Array.from({length: n}, (_, i) => i);
