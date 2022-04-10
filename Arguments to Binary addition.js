@@ -16,3 +16,9 @@ function arr2bin(arr){
     sum = sum.toString(2)
     return sum
   }
+
+  //Other solution
+
+  function arr2bin(arr) {
+    return arr.reduce((sum, cur) => typeof(cur) === 'number' ? sum + cur : sum, 0).toString(2);
+  }
