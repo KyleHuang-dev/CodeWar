@@ -23,3 +23,8 @@ Array.prototype.filter=function(fn){
   }
 
 
+
+  //Other solution by reduce solution
+  Array.prototype.filter = function (fn) {
+    return this.reduce((pre, val) => fn(val) ? [...pre, val] : pre, []);
+   };
