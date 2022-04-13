@@ -11,3 +11,6 @@
 var ArrowFunc = function(arr) {
     return arr.map(n => String.fromCharCode(n)).join(''); //Complete this function
   }
+
+//other solution
+const ArrowFunc = (arr) => String.fromCharCode(...arr);
