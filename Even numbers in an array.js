@@ -15,4 +15,9 @@ function evenNumbers(array, number) {
       }
     }
     return even.slice( - number)
+}
+
+// shorter code with filter method
+function evenNumbers(array, number) {
+    return array.filter(el=> el%2 ===0).slice(-number)
   }
