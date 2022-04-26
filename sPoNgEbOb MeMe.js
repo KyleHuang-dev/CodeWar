@@ -14,6 +14,15 @@ function spongeMeme(sentence) {
     return arr.join('')
   }
 
+// solution with convert to array
+function spongeMeme(sentence) {
+    let res = '';
+    for(let i = 0; i < sentence.length; i++) {
+       res += ( i % 2) ? sentence[i].toLowerCase() :  sentence[i].toUpperCase()
+    }
+    return res;
+  }
+
 // solution with map method
 function spongeMeme(sentence) {
     return sentence.split('').map( (n, i)=>{
