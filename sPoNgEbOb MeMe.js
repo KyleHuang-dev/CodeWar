@@ -13,3 +13,10 @@ function spongeMeme(sentence) {
     }
     return arr.join('')
   }
+
+// solution with map method
+function spongeMeme(sentence) {
+    return sentence.split('').map( (n, i)=>{
+      return i%2? n.toLowerCase(): n.toUpperCase()
+    }).join('')
+  }
