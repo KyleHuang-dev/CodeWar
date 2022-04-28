@@ -45,12 +45,12 @@ function robberEncode(sentence) {
   const consonants = 'BCDFGHJKLMNPQRSTVWXYZ';
   const uppers = consonants.split('');
   const lowers = consonants.toLowerCase().split('');
-  
-  const convert = char => { 
-    if (uppers.includes(char)) return `${char}O${char}`;
-    if (lowers.includes(char)) return `${char}o${char}`;
-    return char;
+ 
+  function covert(char){
+    if ( uppers.includes(char)) return `${char}O${char}`
+    if ( lowers.includes(char)) return `${char}o${char}`
+    else return char;
   }
-
-  return sentence.split('').map(convert).join('');
+  
+  return sentence.split('').map(covert).join('')
 }
