@@ -29,4 +29,15 @@ function makeValley(arr) {
     }
     return leftArr.concat(rightArr)
   }
-  
+
+
+// solution with forEach 
+function makeValley(arr) {
+    let leftArr = []
+    let rightArr = [];
+    
+    arr.sort((a,b)=> b-a)
+      .forEach((num,i) =>i%2? rightArr.unshift(num) :leftArr.push(num) )
+    
+    return [...leftArr, ...rightArr]
+  }
