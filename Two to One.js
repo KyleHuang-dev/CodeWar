@@ -22,3 +22,8 @@ function longest(s1, s2) {
       }return acc
     },[]).join('')
   }
+
+  // use new Set method
+  function longest(s1, s2) {
+    return [... new Set(s1+s2)].sort().join('')
+  }
