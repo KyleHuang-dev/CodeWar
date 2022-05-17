@@ -8,13 +8,16 @@
 
 
 
-function divisors(integer) {
+
+
+ 
+  function divisors(integer) {
     const arr = []
     for(i=2; i<integer;i++){
       if (integer % i ===0){
         arr.push(i)
       }
     }
-    if (arr.length ===0) return `${integer} is prime`
-    else return arr
+     //shorter the code
+    return arr.length ? arr : integer + " is prime"
   };
