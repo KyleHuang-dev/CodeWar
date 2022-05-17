@@ -6,10 +6,7 @@
 // divisors(25); // should return [5]
 // divisors(13); // should return "13 is prime"
 
-
-
-
-
+ //shorter the code
  
   function divisors(integer) {
     const arr = []
