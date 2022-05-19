@@ -21,4 +21,11 @@ function removeSmallest(numbers) {
     
     return numbers
   }
+
+//solution with filter method
+function removeSmallest(numbers) {
   
+    let index = numbers.indexOf(Math.min(...numbers))
+    
+    return numbers.filter((el,i)=> i !==index)
+  }
