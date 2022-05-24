@@ -12,4 +12,18 @@ function bingo(a) {
     }
     return 'WIN'
   }
-  
+
+  //new method Array.every()
+
+  function bingo(a) {
+    let bingo = [2,7,9,14,15]
+    if ( bingo.every( num => a.includes(num) ) ) {
+      return 'WIN'
+    }else{
+      return 'LOSE'
+    }
+  }
+
+  //simplify
+
+  const bingo = a => [2,7,9,14,15].every( num => a.includes(num))? 'WIN':'LOSE'
