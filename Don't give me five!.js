@@ -23,3 +23,14 @@ function dontGiveMeFive(start, end)
   return numArr.filter(el=> el.split('').indexOf('5')==-1).length
   
 }
+
+
+//additional solution
+
+function dontGiveMeFive(start, end)
+{
+  for(var arr=[], i=start; i<= end; i++){
+    if ( !String(i).includes('5') ) arr.push(i)
+  }
+  return arr.length
+}
