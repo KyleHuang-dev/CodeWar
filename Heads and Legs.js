@@ -37,3 +37,14 @@ function animals(heads, legs){
     }
     return 'No solutions';
   }
+
+//solve the problem by for loop
+function animals(heads, legs){
+    for(var i = 0; i <= heads; i++){
+      if( (i * 4 + (heads- i) * 2) == legs){
+        return [heads- i,i];
+      }
+    }
+    return 'No solutions';
+  }
+  
