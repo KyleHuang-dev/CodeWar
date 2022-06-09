@@ -18,3 +18,15 @@ const logicalCalc = (array, op) => {
     });
   };
 
+  //Other solution, with object
+
+  var ops = {
+    'AND': (a, b) => a && b,
+    'OR': (a, b) =>  a || b,
+    'XOR': (a, b) => a !== b
+  }
+  
+  
+  function logicalCalc(array, op){
+    return array.reduce(ops[op]);
+  }
