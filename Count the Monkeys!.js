@@ -14,3 +14,10 @@ function monkeyCount(n) {
     }
     return arr
   }
+
+  // shorter code
+  function monkeyCount(n) {
+    for (var i = 0, arr = []; i < n; arr.push(++i));
+    
+    return arr;
+  }
