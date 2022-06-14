@@ -23,3 +23,17 @@ function isCoprime(x, y) {
     let arr = arrX.filter(e => arrY.includes(e))
     return arr.length === 1
   }
+
+// other solution with for loop
+  function isCoprime(x, y) {
+    const min = Math.min(x, y);
+    
+    for (let i = 2; i <= min; i++) {
+      if (x % i === 0 && y % i === 0) {
+        return false;
+      }
+    }
+    
+    
+    return true;
+  }
