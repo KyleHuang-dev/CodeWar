@@ -24,3 +24,12 @@ function triangular( n ) {
     }
     return sum
   }
+
+// because loop take too long
+var max_n = Math.floor(Math.sqrt(Number.MAX_VALUE));
+
+function triangular(n) {
+  if (n < 1 || n >= max_n) return 0;
+  
+  return (n * (n + 1)) / 2;
+}
