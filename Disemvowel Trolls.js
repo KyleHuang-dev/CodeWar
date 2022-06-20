@@ -18,3 +18,12 @@ function disemvowel(str) {
     return newArr.join('')
   }
 
+//other solution
+
+function disemvowel(str) {
+  let arr =['a','e','i','o','u']
+  return str
+  .split('')
+  .filter(s=> arr.indexOf(s.toLowerCase())===-1)
+  .join('')
+}
