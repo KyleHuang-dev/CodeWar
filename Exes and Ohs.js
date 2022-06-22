@@ -16,3 +16,9 @@ function XO(str) {
     }
     return x === o? true: false
   }
+
+// solution with filter method
+const XO = str => {
+    str = str.toLowerCase().split('');
+    return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+  }
