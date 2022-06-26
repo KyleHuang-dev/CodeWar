@@ -23,3 +23,12 @@ function uncensor(infected, discovered) {
     }
     return infArr.join('')
 }
+
+
+// other solution with map method.
+function uncensor(infected, discovered) {
+    let disArr = [...discovered]
+    
+    return infected.split('').map( el => el === '*'? disArr.shift(): el).join('')
+  
+  }
