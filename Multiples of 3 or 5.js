@@ -29,3 +29,14 @@ function solution(number){
     }
     return numArr.reduce((a,b)=>a+b,0)
   }
+
+  //shorter code
+  function solution(number){
+    var sum = 0;
+    for (var i = 3; i < number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        sum += i;
+      }
+    }
+    return sum;
+  }
