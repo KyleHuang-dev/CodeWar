@@ -6,3 +6,6 @@ var countBits = function(n) {
     let binaryNum = Number(n).toString(2)
     return binaryNum.split('').filter(el => el==='1').length
  };
+
+ // even better solution
+ countBits = n => n.toString(2).split('0').join('').length;
