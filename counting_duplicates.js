@@ -22,3 +22,18 @@ function duplicateCount(text){
      return Object.values(textObj).filter(el => el >1).length;
  }
  
+//simplify the code
+
+function duplicateCount(text){
+    const textObj = text.toLowerCase().split('').reduce((obj,item)=>{
+        obj[item] = !obj[item] ? 1 : obj[item]+1;
+        return obj
+    },{})
+
+    let count = 0;
+    for (let key in textObj){
+        count += textObj[key]>1 ? 1:0;
+    }
+    return count;
+}
+ 
