@@ -34,3 +34,17 @@ const longestConsec = (strArr, k)=>{
     }
     return longest
   }
+
+
+    // reduce method
+    function longestConsec(strarr, k) {
+      if (k<=0 || k>strarr.length)
+        return ''
+    
+      return strarr.reduce( (longest, cur, i)=>{
+        let currentStr = strarr.slice(i,i+k).join('')
+        return currentStr.length >longest.length
+                  ?longest = currentStr
+                  :longest;
+      },"")
+  }
