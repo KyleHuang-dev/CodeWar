@@ -41,3 +41,17 @@ function queueTime(customers, registers) {
   
     return arr[arr.length - 1];
   }
+
+
+  //Other solution
+  function queueTime(customers, n) {
+    let machineArr = new Array(n).fill(0);
+    
+    for ( let waitTime of customers){
+      let indexOfLeast = machineArr.indexOf(Math.min(...machineArr));
+      
+      machineArr[indexOfLeast] += waitTime
+    }
+    
+    return Math.max(...machineArr)
+  }
