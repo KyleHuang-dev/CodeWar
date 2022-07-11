@@ -20,3 +20,10 @@ function isPangram(string){
      return letterArr.length === 0 ? true: false
     
   }
+
+//additional solution with every method
+function isPangram(string){
+    const letterArr = [...'abcdefghijklmnopqrstuvwxyz'];
+    
+    return letterArr.every(el=> string.toLowerCase().includes(el))
+  }
