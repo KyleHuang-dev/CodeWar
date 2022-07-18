@@ -27,3 +27,21 @@ function sumDigPow(a, b) {
       a++;
     }
     return arr;
+
+
+// solution with for loop 
+
+function sumDigPow(a, b){
+    let arr =[];
+    
+    for (i = a; i <= b; i++){
+      let sum = 0;
+      for (j = 0; j<String(i).length; j++){
+        sum += Math.pow(Number(String(i)[j]), (j+1))
+      }
+      if (sum == i) arr.push(i)
+    }
+      return arr
+  }
+  
+  
