@@ -17,3 +17,11 @@ function duplicateEncode(word){
     return newArr.join('')
    }
    
+
+// use indexOf and lastIndexOf to check if there are repeat element
+function duplicateEncode(word){
+    return word.toLowerCase().split('').map((letter,i,arr)=>{
+      letter = arr.indexOf(letter) === arr.lastIndexOf(letter) ? "(" : ")";
+      return letter
+    }).join('')
+}
