@@ -38,5 +38,13 @@ function stockList(listOfArt, listOfCat){
         obj[bookChar] += sales; 
         return obj;
       },{})
-
+    
+      let resultArr = [];
+      for (i =0 ; i< listOfCat.length;i++){
+        if (!bookObj[listOfCat[i]]){
+            bookObj[listOfCat[i]]= 0;
+        }
+        resultArr.push( `(${listOfCat[i]} : ${bookObj[listOfCat[i]]})`)
+      }
+      return resultArr.join(" - ")
   }
