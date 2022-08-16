@@ -15,3 +15,10 @@ function deleteNth(arr,n){
       return accArr
     },[])
   }
+
+  //
+
+const deleteNth = (arr, x) => {
+  let m = {};
+  return arr.filter( v => (m[v] = m[v]+1||1) <= x );
+}
