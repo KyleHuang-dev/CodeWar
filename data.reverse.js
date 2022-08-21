@@ -22,3 +22,12 @@ function dataReverse(data) {
     }
     return result.reverse().flat()
   }
+
+//solution with while loop and splice
+function dataReverse(data) {
+    let result = [];
+    while(data.length){
+      result.push(data.splice(-8))
+    }
+    return result.flat()
+  }
