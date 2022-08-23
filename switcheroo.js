@@ -20,3 +20,6 @@ function switcheroo(x){
       return letter
     }).join('')
   }
+
+  //Regex solution
+  const switcheroo=x=>x.replace(/[ab]/g,x=>x=="a"?"b":"a")
