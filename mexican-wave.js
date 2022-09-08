@@ -20,4 +20,16 @@ function wave(str){
     return strArr
   }
 
+// simplify the code
 
+  function wave(str){
+    let result =[];
+    str.split('').forEach((letter,i)=>{
+      if (letter !==" "){
+        let newStr = str.slice(0,i) + letter.toUpperCase() + str.slice(i+1)
+        result.push(newStr)
+      }
+    })
+    
+    return result
+  }
