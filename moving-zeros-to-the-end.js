@@ -15,3 +15,11 @@ function moveZeros(arr) {
 function moveZeros(arr) {
     return arr.filter(el => el !== 0).concat(arr.filter(el => el ===0))
   }
+
+//rest operator
+var moveZeros = function (arr) {
+    return [
+      ...(arr.filter(n => n !== 0)),
+      ...(arr.filter(n => n === 0))
+    ];
+  }
