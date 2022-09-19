@@ -13,4 +13,8 @@ function twoOldestAges(ages){
     const [oldest,secondOldest] = ages.sort((a,b)=> b-a);
     return [secondOldest,oldest]
   }
-  
+
+// additional solution with slice method
+function twoOldestAges(ages){
+    return ages.sort((a,b)=>a-b).slice(-2);
+ }
